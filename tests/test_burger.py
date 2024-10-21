@@ -4,6 +4,17 @@ from conftest import create_bun,set_ingredients_one, set_ingredients_two
 
 
 class TestBurger:
+
+    def test_init_bun(self):
+        burger = Burger()
+
+        assert burger.bun == None
+
+    def test_init_ingredients(self):
+        burger = Burger()
+
+        assert burger.ingredients == []
+
     def test_set_bun(self, create_bun):
         burger = Burger()
         burger.set_buns(create_bun)
